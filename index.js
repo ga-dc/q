@@ -4,7 +4,7 @@ app.set("view engine","hbs")
 app.use(express.static("public"))
 
 app.get("/", function(req, res){
-  res.render("index")
+  res.sendFile(__dirname + "/public/hello.html")
 })
 
 app.listen(process.env.PORT || 3000)
